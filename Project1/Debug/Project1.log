@@ -1,0 +1,41 @@
+﻿  Source1.cpp
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\xmemory0(879): error C3074: 無法使用括以括號的初始設定式來初始化陣列
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\vector(900): note: 請參閱所要編譯的函式 樣板 具現化 'void std::_Default_allocator_traits<_Alloc>::construct<_Ty,const int(&)[10][9]>(_Alloc &,_Objty (*const ),const int (&)[10][9])' 之參考
+          with
+          [
+              _Alloc=std::allocator<int [10][9]>,
+              _Ty=int [10][9],
+              _Objty=int [10][9]
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\vector(902): note: 請參閱所要編譯的函式 樣板 具現化 'void std::_Default_allocator_traits<_Alloc>::construct<_Ty,const int(&)[10][9]>(_Alloc &,_Objty (*const ),const int (&)[10][9])' 之參考
+          with
+          [
+              _Alloc=std::allocator<int [10][9]>,
+              _Ty=int [10][9],
+              _Objty=int [10][9]
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\vector(916): note: 請參閱所要編譯的函式 樣板 具現化 'void std::vector<int [10][9],std::allocator<_Ty>>::_Emplace_back_with_unused_capacity<const int(&)[10][9]>(const int (&)[10][9])' 之參考
+          with
+          [
+              _Ty=int [10][9]
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\vector(932): note: 請參閱所要編譯的函式 樣板 具現化 'void std::vector<int [10][9],std::allocator<_Ty>>::emplace_back<const int(&)[10][9]>(const int (&)[10][9])' 之參考
+          with
+          [
+              _Ty=int [10][9]
+          ]
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\vector(931): note: 編譯 類別 樣板 成員函式 'void std::vector<int [10][9],std::allocator<_Ty>>::push_back(const _Ty (&))' 時
+          with
+          [
+              _Ty=int [10][9]
+          ]
+  c:\users\powen\onedrive\桌面\實習\0802\project1\project1\source1.cpp(70): note: 請參閱所要編譯的函式 樣板 具現化 'void std::vector<int [10][9],std::allocator<_Ty>>::push_back(const _Ty (&))' 之參考
+          with
+          [
+              _Ty=int [10][9]
+          ]
+  c:\users\powen\onedrive\桌面\實習\0802\project1\project1\source1.cpp(13): note: 查看要編譯的 類別 樣板 具現化 'std::vector<int [10][9],std::allocator<_Ty>>' 參考
+          with
+          [
+              _Ty=int [10][9]
+          ]
