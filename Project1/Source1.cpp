@@ -5,12 +5,12 @@
 using namespace std;
 
 char readChar(char key);
-void loadmap();
-void loadmap2();
-void loadmap3(int*a);
+void loadMap(string fileName);
+void showMap(int top);
 
+int turn = 0; //回合
 int top=-1;
-vector<int[10][9]> undo;
+vector<vector<int>> undo;
 
 int main()
 {
@@ -18,16 +18,18 @@ int main()
 	while (temp = _getch()) {
 		if (temp == 'a')
 		{
-			loadmap(); //refresh screen
+			loadMap("Check.txt"); //refresh screen
+			showMap(top);
 		}
 		else if(temp =='b')
 		{
-			loadmap2();
+			loadMap("Initial.txt"); 
+			showMap(top);
 		}
 		else if (temp == 'u')
 		{
 			top--;
-			loadmap3(undo[top]);
+			showMap(top);
 		}
 		else
 		{
@@ -51,29 +53,34 @@ int main()
 	}
 }*/
 
-void loadmap()
+void loadMap(string fileName)
 {
 	fstream fin;
-	fin.open("Check.txt");
-	int a[10][9];
+	fin.open(fileName);
+	vector<int> temp;
+	int tempInt;
 	int j = 0;
-	do { //少了最後一行
-		for (int i = 0; i < 9; i++)
-		{
-			fin >> a[j][i];
-			cout << a << " ";
-		}
-		cout << endl;
-		j++;
+	do {
+		fin >> tempInt;
+		temp.push_back(tempInt);
 	} while (!fin.eof());
 
-	undo.push_back(a);
+	undo.push_back(temp);
 	top++;
 
 }
 
+void showMap(int top)
+{
+	for (int i = 1; i < 91; i++)
+	{
+		if (i % 9 == 0) cout << endl;
+		cout<<undo[top][i]<<" ";
+	}
+}
 
-void loadmap2()
+
+/*void loadmap2()
 {
 	fstream fin;
 	fin.open("Initial.txt");
@@ -104,4 +111,4 @@ void loadmap3(int*a)
 		}
 		cout << endl;
 	}
-}
+}*/
