@@ -15,7 +15,7 @@ int turn = 0; //回合
 int top=-1; //紀錄當前的狀態
 vector<vector<int>> undo;
 
-int main()
+/*int main()
 {
 	char temp;
 	while (temp = _getch()) {
@@ -56,7 +56,7 @@ int main()
 		}
 
 	}
-}
+}*/
 
 
 
